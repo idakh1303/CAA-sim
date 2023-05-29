@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon  -->
+    <!-- open graph  -->
+    <!-- libraries  -->
+    <title>Airport Simulator</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="icons/logo.svg" alt="logo">
+    </div>
+
+    <section class="main">
+        <div class="container">
+            <h1 class="main__title">CIVIL <span>AVIA</span>TION <span>AC</span>ADEMY</h1>
+            <h2 class="main__subtitle">Simulator</h2>
+            <div class="main__data" id="time"></div>
+            <div class="main__tabs__wrapper">
+                <div class="main__tabs__item">Анимация</div>
+                <div class="main__tabs__item">ATC Ссылки</div>
+                <div class="main__tabs__item">Свидетельство</div>
+                <div class="main__tabs__item">Метео</div>
+                <div class="main__tabs__item">Галерея</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="simulator">
+        <div class="container">
+            <div class="tab-container">
+                <!-- tab content -->
+                <div class="tab-content">
+                    <div class="tab-content__left">
+                        <div class="tab-content__item">
+                            <div class="item__title">Аэропорты</div>
+                            <div class="separator"></div>
+                            <div class="item__choice">
+                                <div class="txt">Астана (UACC)</div>
+                                <input data-city id="ASTANA" type="checkbox">
+                            </div>
+                            <div class="item__choice">
+                                <div class="txt">Алматы (UAAA)</div>
+                                <input data-city id='ALMATY' type="checkbox">
+                            </div>
+                            <div class="item__choice">
+                                <div class="txt">Шымкент (UAII)</div>
+                                <input data-city id='SHYMKENT' type="checkbox">
+                            </div>
+                            <div class="item__choice">
+                                <div class="txt">Актобе (UATT)</div>
+                                <input data-city id='AKTOBE' type="checkbox">
+                            </div>
+                        </div>
+                        <div class="tab-content__item">
+                            <div class="item__title">Карта</div>
+                            <div class="separator"></div>
+                            <div class="item__choice">
+                                <div class="txt">SID</div>
+                                <input data-map id="SID" type="checkbox">
+                            </div>
+                            <div class="item__choice">
+                                <div class="txt">STAR</div>
+                                <input data-map id="STAR" type="checkbox">
+                            </div>
+                        </div>
+                        <button class="tab-content__button">СТАРТ</button>
+                    </div>
+                    <div class="tab-content__right tab-content__item">
+                        <div class="item__title">ВАЖНО</div>
+                        <div class="separator"></div>
+                        <div class="item__text">
+                            Авиадиспетчер – это специалист, контролирующий движение воздушного транспорта.
+                            Основной задачей авиадиспетчера является обеспечение безопасного, бесперебойного и
+                            упорядоченного движения воздушных судов (например, самолетов или вертолетов). Контроль над
+                            движением самолета осуществляется с момента запуска двигателя воздушного судна, до
+                            заруливания на стоянку после посадки на аэродроме пункта назначения.
+                            Этот сайт содержит информацию, предназначенную для ознакомления студентов с профессией
+                            авиадиспетчера.
+                            <br><br>
+                            Благодаря визуальной демонстрации в «АНИМАЦИЯ» вы можете понять, как борт входит и выходит с
+                            зоны ответственности определенной диспетчерской зоны.
+                            Во вкладке «ССЫЛКИ» можно ознакомиться с нормативно-правовыми актами гражданской авиации.
+                            Благодаря им появляется основа знаний в авиации для работы в диспетчерских пунктах.
+                            Особое внимание стоит уделить «СВИДЕТЕЛЬСТВО», так как в этой части перечислены требования
+                            для получения свидетельства диспетчера.
+                            Не менее важная вкладка «МЕТЕО» поможет вам с легкостью понимать метеорологическую сводку,
+                            следующих типов: METAR, TAF и т.д.
+                            В крайней вкладке «ГАЛЕРЕЯ» разместились диспетчерские районы городов Республики Казахстан.
+                        </div>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <div class="tab-content">
+                    <div class="tab-content__item">
+                        <div class="item__title">нормативно-правовые акты</div>
+                        <div class="separator"></div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Закон Республики Казахстан «Об использовании воздушного пространства
+                                Республики Казахстан и деятельности авиации»</div>
+                            <a href="https://adilet.zan.kz/rus/docs/Z100000339_">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила использования воздушного пространства Республики</div>
+                            <a href="https://adilet.zan.kz/rus/docs/P1100000506">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила производства полетов в гражданской авиации Республики
+                                Казахстан</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1700015852">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила метеорологического обеспечения гражданской авиации
+                                Республики Казахстан</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V170001535">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила орнитологического обеспечения полетов гражданских воздушных
+                                судов в Республики Казахстан</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1500011724">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила радиотехнического обеспечения полетов и авиационной
+                                электросвязи в гражданской авиации.</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1700015554">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила аварийно-спасательного обеспечения полетов на территории
+                                Республики Казахстан.</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1500012216">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила по организации поисково-спасательного обеспечения полетов на
+                                территории Республики Казахстан.</div>
+                            <a href="https://adilet.zan.kz/rus/docs/P1100001296">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила авиационной безопасности</div>
+                            <a href="https://adilet.zan.kz/rus/docs/P030000746_/links">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила профессиональной подготовки авиационного персонала</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1500010562">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Инструкция по организации и обслуживанию воздушного движения.</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1100007006">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Правила фразеологии радиообмена при выполнении полетов и
+                                обслуживании воздушного движения</div>
+                            <a href="https://adilet.zan.kz/rus/docs/V1000006635">читать</a>
+                        </div>
+                        <div class="tab-content__item__link">
+                            <div class="item__text">Сборник Аэронавигационной информации Республики Казахстан
+                            </div>
+                            <a href="https://www.ans.kz/ru/ais/eaip">читать</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <div class="tab-content">
+                    <div class="tab-content__item">
+                        <div class="item__title">СВИДЕТЕЛЬСТВО ДИСПЕТЧЕРА</div>
+                        <div class="separator"></div>
+                        <div class="item__text">Кандидату на получение свидетельства диспетчера ОВД предъявляются
+                            следующие квалификационные требования:
+                            <br><br>
+                            1) возраст - старше 21 года;
+                            <br><br>
+                            2) действующее медицинское заключение 3 класса;
+                            <br><br>
+                            3) прохождение курса теоретической подготовки, разработанного в соответствии с Типовыми
+                            программами, в сертифицированном АУЦ и демонстрация уровня теоретических знаний, в следующих
+                            областях:
+                            <br><br>
+                            законодательство Республики Казахстан об использовании воздушного пространства Республики
+                            Казахстан и деятельности авиации, правила и положения в части касающейся обслуживания
+                            воздушного движения, в том числе права, обязанности и ответственность обладателя
+                            квалификационной (ых) отметки (ок) диспетчера ОВД;
+                            <br><br>
+                            принципы, использование и ограничения оборудования, применяемого в ОВД, речевая связь,
+                            регистрация информации, передача данных, радионавигационные средства, наблюдение и
+                            радиолокационные системы, автоматическое зависимое наблюдение, обработка планов полета,
+                            дисплей (интерфейс пользователя), оперативные данные и данные об условиях эксплуатации;
+                            <br><br>
+                            принципы полета, принципы эксплуатации и функционирования ВС, силовых установок и систем,
+                            характеристики ВС, имеющие отношение к ОВД;
+                            возможности человека, включая принципы контроля факторов угрозы и ошибок, а также подготовку
+                            по оптимизации работы группы;
+                            <br><br>
+                            авиационная метеорология, применение и понимание метеорологической документации и
+                            информации, возникновение и характеристики особых явлений погоды, которые влияют на
+                            выполнение полетов и их безопасность, принцип измерения барометрической высоты;
+                            <br><br>
+                            принципы аэронавигации, принципы, ограничения и точность навигационных систем и визуальных
+                            средств;
+                            <br><br>
+                            процедуры ОВД, связи, радиотелефонии и обмена фразеологией (штатные, нештатные 1 аварийные),
+                            использование соответствующей авиационной документации, практические методы обеспечения
+                            безопасности полетов.
+                        </div>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <div class="tab-content">
+                    <div class="tab-content__item">
+                        <div class="item__title">Метео</div>
+                        <div class="separator"></div>
+                        <div class="item__text">
+                            Сокращения и обозначения
+                            <br><br>
+                            ATIS- автоматическая передача информации в районе аэродрома;
+                            <br><br>
+                            METAR - регулярная метеорологическая сводка погоды;
+                            <br><br>
+                            TAF- прогноза погоды по аэродрому;
+                            <br><br>
+                            GAMET-зональный прогноз для полетов на малых высотах;
+                            <br><br>
+                            SIGMET- краткое описание фактических или ожидаемых определенных явлений погоды по маршруту
+                            полета, которые могут повлиять на безопасность полетов ВС;
+                            <br><br>
+                            AIRMET- краткое описание фактических или ожидаемых определенных явлений погоды по маршруту
+                            полета, которые не были включены в GAMET, и , которые могут повлиять на безопасность полетов
+                            ВС.
+                        </div>
+                        <div class="item__picture">
+                            <img src="https://skywaypublic.ru/publications/images/Rasshifrovka_Metar01.jpg"
+                                alt="metar picture">
+                        </div>
+                        <div class="item__text">
+                            Примеры:
+                            <br><br>
+                            METAR: UADD 150530Z 36004MPS 330V050 9999 NSC 27/06 Q1012 NOSIG RMK QFE701/0935
+                            <br><br>
+                            TAF: UAA 110503Z 2806/2906 02003MPS 9999 FEW100 TX27/2809Z TN09/2901Z TEMPO 2806/2812
+                            07004G10MPS BECMG 2812/2813 21003MPS TEMPO 2812/2824 16003MPS BECMG 2902/2903 34003MPS
+                            SCT050CB BKN100
+                            <br><br>
+                            GAMET: UASP GAMET VALID 150600/151200 UASP-
+                        </div>
+                    </div>
+                </div>
+                <!-- tab content -->
+                <div class="tab-content grid">
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Актау</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/aktau.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Атырау</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/atyrau.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Балхаш</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/balkhash.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Караганда</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/karagnda.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Кокшетау</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/kokshetau.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Костанай</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/kostanay.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Кызылорда</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/kyzylorda.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Павлодар</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/pavlodar.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Петропавловск</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/petropavlovsk.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Семей</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/semey.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Талдыкорган</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/taldykorgan.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Тараз</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/taraz.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Уральск</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/uralsk.png" alt="airport">
+                        </div>
+                    </div>
+                    <div class="tab-content__item grid__item">
+                        <div class="item__title">Усть-Каменогорск</div>
+                        <div class="separator"></div>
+                        <div class="item__img">
+                            <img src="img/static/ust-kamenogorsk.png" alt="airport">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal__text"></div>
+            <div class="modal__picture__wrapper">
+                <div data-simpic class="modal__picture__item">
+                    <img src="img/astana_sid.gif" alt="ASTANA">
+                    <img src="img/astana_star.gif" alt="ASTANA">
+                </div>
+                <div data-simpic class="modal__picture__item">
+                    <img src="img/almaty_sid.gif" alt="ALMATY">
+                    <img src="img/almaty_star.gif" alt="ALMATY">
+                </div>
+                <div data-simpic class="modal__picture__item">
+                    <img src="img/shymkent_sid.gif" alt="SHYMKENT">
+                    <img src="img/shymkent_star.gif" alt="SHYMKENT">
+                </div>
+                <div data-simpic class="modal__picture__item">
+                    <img src="img/aktobe_sid.gif" alt="AKTOBE">
+                    <img src="img/aktobe_star.gif" alt="AKTOBE">
+                </div>
+            </div>
+            <div class="modal__cross">
+                <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- script imports  -->
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>

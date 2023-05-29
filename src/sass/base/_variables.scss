@@ -1,0 +1,47 @@
+$main-color:#00A8E8;
+$main-text-color: #4D545C;
+$bg-main-color: #FFFFFF;
+$grey-box: #D9D9D9;
+
+
+
+.item__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $main-text-color;
+    text-transform: capitalize;
+
+}
+.item__choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: $main-text-color;
+    text-transform: uppercase;
+
+    input {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+}
+.item__text {
+    color: $main-text-color;
+    font-size: 16px;
+}
+.item__picture {
+    margin: 30px 0;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        border-radius: 20px;
+    }
+}
